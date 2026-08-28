@@ -1,0 +1,26 @@
+body, input {
+    font-size: x-large;
+}
+
+table {
+  border-collapse:  collapse;     /* セルの線を重ねる */
+  border: solid 1px 0px;              /* 枠線指定 */
+}
+table tbody {
+  border-top: solid 2px;
+}
+
+table tr {
+  border-top: solid 1px;
+}
+
+table thead tr {
+    text-align: center;
+}
+table thead tr :nth-child(n+2) {
+    padding-left: 3em;
+}
+
+table.number tbody td{
+    text-align: right;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src='https://cdn.jsdelivr.net/npm/bignumber.js@latest/dist/bignumber.min.js' defer></script>
+    <script type="module" src="gacha/gacha.js" defer></script>
+    <title>ガチャで1回以上引ける確率</title>
+</head>
+<body>
+    <h1>ガチャで1回以上引ける確率（%）</h1>
+    <input id="percent" type="number" placeholder="3" >
+    <br>
+    <hr>
+
+    <table id="gacha" class="number">
+        <thead>
+            <tr>
+                <td>
+                    回数
+                </td>
+                <td>
+                    確率（%）
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <hr>
+    <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#%E6%95%B0%E5%80%A4%E3%81%AE%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" target="_blank">※誤差がでる可能性があります</a>
+
+</body>
+</html>
