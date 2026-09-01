@@ -3,7 +3,7 @@ import {getDecimalDigits} from "./number.js"
 /**
  * 小数点の桁数のデフォルト
  */
-const DEFAULT_DECIMAL_DIGIT = 1;
+const DEFAULT_DECIMAL_DIGIT = 0;
 
 /**
  * %の計算に必要な100
@@ -27,20 +27,8 @@ export function calcDigitShift(digit) {
     digit = DEFAULT_DECIMAL_DIGIT;
   }
 
-  // 桁数に応じたシフト用の値
-  return 10 ** digit;
-}
-
-/**
- * 
- * @param {number} probablity 確率（1以下の少数） 
- * @param {number} digit 桁数
- * @returns 四捨五入された%
- */
-export function toPercentage(probablity, digit) {
-  // 桁数に応じた%の四捨五入
-  const digitShift = calcDigitShift(digit);
-  return Math.round(probablity * CENT * digitShift) / digitShift;
+  // 桁数に応じたシフト用の値（四捨五入するため+1桁必要）
+  return 10 ** (digit);
 }
 
 export class BigFraction {

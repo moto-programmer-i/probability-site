@@ -1,6 +1,6 @@
 import {INT_INDEX, DECIMAL_INDEX, getDecimalDigits} from "../modules/number.js"
 import {addLine, clearTbody} from "../modules/table.js"
-import {CENT, toPercentage, BigFraction} from "../modules/probability.js"
+import {CENT, BigFraction} from "../modules/probability.js"
 
 
 const MAX_LINE = 100;
