@@ -25,14 +25,7 @@ function calc() {
     // %を分数にする
     const probability = BigFraction.parsePercentStr(percentInput.value);
 
-    // 1行目は確率そのまま
-    const line = [0, 0];
-    line[COUNT_INDEX] = 1;
-    line[PROBABILITY_INDEX] = probability.toPercent(digit).toFixed(digit);
-    addLine(tbody, line);
-
-
-
+    
     {
         // 余事象の確率
         const complementProbability = probability.clone();
@@ -41,6 +34,7 @@ function calc() {
         const currentComplementProbability = complementProbability.clone();
 
         // ガチャが1回以上出る確率を追加していく
+        const line = [0, 0];
         for(let i = 2; i <= MAX_LINE; ++i) {
             currentComplementProbability.multiply(complementProbability);
             line[COUNT_INDEX] = i;
