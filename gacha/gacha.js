@@ -30,8 +30,16 @@ function calc() {
         // 余事象の確率
         const complementProbability = probability.clone();
         complementProbability.toComplement();
+
+        // 100%以上の確率が入力された場合
+        if (complementProbability.numerator <= 0) {
+            addLine(tbody, ["", "入力が100%以上です"]);
+            return;
+        }
+
         // 現在の余事象の確率
         const currentComplementProbability = complementProbability.clone();
+
 
         // ガチャが1回以上出る確率を追加していく
         const line = [0, 0];
