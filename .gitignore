@@ -1,0 +1,5 @@
+# Chromeのcors回避用フォルダ
+/temp/**
+
+# 結局フォルダだけを残したい場合はgitkeepがいるっぽい
+!.gitkeep
